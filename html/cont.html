@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../imagem/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <title>Fale Conosco</title>
+    <style>
+      .container{
+        max-width: 1270px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 4%;
+        height: 70vh;
+      }
+      form{
+        background-color: white;
+        max-width: 700px;
+        width: 650px;
+        height: 420px;
+        padding: 40px;
+        border-radius: 20px;
+      }
+      form h1{
+        text-align: center;
+        font-size: 30px;
+        color: #2d5966;
+      }
+      form p{
+        text-align: center;
+        margin: 20px 0px;
+      }
+      .input-single{
+        position: relative;
+        margin: 30px 0;
+      }
+      .input-single label{
+        position: absolute;
+        left: 0;
+        bottom: 5px;
+        transition: all 0.2s;
+        cursor: text;
+      }
+      .input{
+        width: 100%;
+        border: 0;
+        border-bottom: 2px solid #ccc;
+        padding: 5px;
+        font-size: 17px;
+        outline: 0;
+      }
+      form .input-single .input:focus ~ label,
+      form .input-single .input:valid ~ label{
+        transform: translateY(-25px);
+        font-size: 12px;
+        color: #2d5966;
+      }
+      .btn{
+        text-align: center;
+        width: 100%;
+      }
+      form input[type=submit]{
+        padding: 10px 40px;
+        border: 0;
+        border-radius: 10px;
+        background-color: #2d5966;
+        color: #fff;
+        cursor: pointer;
+      }
+      @media only screen and (max-width: 750px) {
+        form{
+          width: 400px;
+          height: 320px;
+        
+        }  
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="picture">
+            <img src="../imagem/capa1.jpg" alt="capa principal">    
+        </div>
+        <nav class="segundario">
+            <a href="../index.html" rel="nooperner nereferrer"><p>Inicil</p></a>
+            <a href="../html/epis.html" rel="nooperner nereferrer"><p>Episódios</p></a>
+            <a href="../html/cont.html" rel="external"><p>Fale Conosco</p></a>
+        </nav>
+    </header>
+    <section class="form-container">
+        <div class="container">
+          <form method="post" action="../php/envia.php">
+                <h1>Entre em contato</h1>
+                <p>Preencha o formulario abaixo</p>
+
+                <div class="input-single">
+                    <input class="input" type="text" id="nome" name="nome" required autocomplete="off" required>
+                    <label for="nome">Seu nome completo:</label>
+                </div>  
+                <div class="input-single">
+                    <input class="input" type="text" id="email" name="email" required autocomplete="off" required>
+                    <label for="email">Seu e-mail:</label>
+                </div>
+                <div  class="input-single"> 
+                    <input class="input" type="text" id="mensagem" name="mensagem" required autocomplete="off" required>
+                    <label for="mensagem">Deixe sua mensagem:</label>
+                </div>
+                <div  class="btn">
+                    <input type="submit" value="Enviar">
+                </div>
+            </form>
+
+        </div>
+    </section>
+</body>
+</html>
